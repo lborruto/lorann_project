@@ -4,10 +4,13 @@ import java.awt.Frame;
 import java.awt.List;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
 import controller.IController;
 import model.IModel;
 
-public class View extends java.awt.JFrame {
+public class View extends JFrame {
 	
 	private String title;
 
