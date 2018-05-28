@@ -10,7 +10,7 @@ public class PathFinder {
 	private PathFinder() {
 		_pathFinder= new PathFinder();
 	}
-
+//
 	private int map;
 	
 	public void PathFinder(int map) {
