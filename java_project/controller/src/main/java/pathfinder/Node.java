@@ -1,6 +1,13 @@
 package pathfinder;
 
+import controller.*;
+
 public class Node {
+	
+	private final Path _path;
+	private Node() {
+		_path = new Path();
+	}
 	
 	private int x;
 	private int y;
