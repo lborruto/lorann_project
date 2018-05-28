@@ -1,8 +1,8 @@
-package Contract;
+package contract;
 
 public interface IElement {
 	
-	public void getPermeability() {
+	public default void getPermeability() {
 		
 	}
 	
