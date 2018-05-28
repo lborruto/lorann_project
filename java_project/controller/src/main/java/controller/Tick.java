@@ -1,8 +1,15 @@
 package controller;
 
-import java.lang.ModuleLayer.Controller;
-
 public class Tick {
+	
+	private final Controller _controller;
+	private Tick() {
+		_controller = new Controller();
+	}
+	
+	public class Controller{
+		
+	}
 	
 	private long clock(){
 		return 0;

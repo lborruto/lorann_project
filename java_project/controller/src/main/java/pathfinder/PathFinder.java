@@ -2,8 +2,15 @@ package pathfinder;
 
 import java.util.ArrayList;
 
-public class PathFinder {
+import controller.Controller;
 
+public class PathFinder {
+	
+	private final PathFinder _pathFinder;
+	private PathFinder() {
+		_pathFinder= new PathFinder();
+	}
+//
 	private int map;
 	
 	public void PathFinder(int map) {
