@@ -18,7 +18,6 @@ public class Window extends JFrame implements KeyListener {
 	    this.setLocationRelativeTo(null);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             
 	    this.setVisible(true);
-	    this.setBackground(Color.BLACK);  
 	    this.setResizable(false);
 	    this.setContentPane(panel);               
 	    this.setVisible(true);  
@@ -49,7 +48,6 @@ public class Window extends JFrame implements KeyListener {
 		
 		if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
 			panel.setLorannX(panel.getLorannX() + 10);
-			repaint();
 			
 		}
 	}
