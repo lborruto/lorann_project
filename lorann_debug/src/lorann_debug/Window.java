@@ -5,10 +5,10 @@ import javax.swing.JPanel;
 
 public class Window extends JFrame {
 	
-	Model _model = new Model();
+	public Model _model = new Model();
 	
 	  public Window(){
-	    this.setTitle("Ma première fenêtre Java");
+	    this.setTitle("Lorann");
 	    this.setSize(800, 800);
 	    this.setLocationRelativeTo(null);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             
@@ -16,6 +16,7 @@ public class Window extends JFrame {
 	    this.setBackground(Color.BLACK);        
 	    this.setContentPane(new Panel (this));               
 	    this.setVisible(true);
-	  }       
+	  }      
+	  
 	}
 
