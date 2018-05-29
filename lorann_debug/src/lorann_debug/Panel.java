@@ -22,7 +22,6 @@ public class Panel extends JPanel {
 			for (char a : tc) {
 				Image img = wnd._model.getImage(a);
 				g.drawImage(img, x*size, 20+y*size, null);
-					//g.drawString(a + "", x * size, 20 + y * size);
 				y++;
 			}
 			x++;
