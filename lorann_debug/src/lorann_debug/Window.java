@@ -1,11 +1,16 @@
 package lorann_debug;
-import java.awt.Color; 
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Window extends JFrame {
+public class Window extends JFrame implements KeyListener {
+
+	private static final long serialVersionUID = 1L;
 	
-	public Model _model = new Model();
+	private Panel panel = new Panel();
 	
 	  public Window(){
 	    this.setTitle("Lorann");
@@ -15,9 +20,43 @@ public class Window extends JFrame {
 	    this.setVisible(true);
 	    this.setBackground(Color.BLACK);  
 	    this.setResizable(false);
-	    this.setContentPane(new Panel (this));               
-	    this.setVisible(true);
-	  }      
-	  
+	    this.setContentPane(panel);               
+	    this.setVisible(true);  
+	  }
+
+	@Override
+	public void keyTyped(KeyEvent evt) {
+		
 	}
+
+	@Override
+	public void keyPressed(KeyEvent evt) {
+		
+		if (evt.getKeyCode() == KeyEvent.VK_RIGHT){
+			panel.setLorannX(panel.getLorannX() + 10);
+			
+		}
+		
+		if (evt.getKeyCode() == KeyEvent.VK_LEFT) {
+			panel.setLorannY(panel.getLorannY() - 10);
+			
+		}
+		
+		if (evt.getKeyCode() == KeyEvent.VK_UP) {
+			panel.setLorannY(panel.getLorannY() - 10);
+			
+		}
+		
+		if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
+			panel.setLorannX(panel.getLorannX() + 10);
+			repaint();
+			
+		}
+	}
+
+	@Override
+	public void keyReleased(KeyEvent evt) {
+		
+	}
+}
 
