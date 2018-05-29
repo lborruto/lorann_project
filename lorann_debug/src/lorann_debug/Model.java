@@ -15,15 +15,16 @@ public class Model {
 	public Image getImage(char a) {
 		if (a == '-') {
 			try {
-				bf = ImageIO.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/horizontal_bone.png"));
+				bf = ImageIO.read(new File(
+						"C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/horizontal_bone.png"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		} else {
 			if (a == '|') {
 				try {
-					bf = ImageIO
-							.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/vertical_bone.png"));
+					bf = ImageIO.read(new File(
+							"C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/vertical_bone.png"));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -36,16 +37,16 @@ public class Model {
 						e.printStackTrace();
 					}
 				} else {
-					if (a == 'H') {
+					if (a == 'i') {
 						try {
 							bf = ImageIO.read(new File(
-									"C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/lorann_u.png"));
+									"C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/purse.png"));
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
 					} else {
-						bf=null;
-						
+						bf = null;
+
 					}
 				}
 			}
