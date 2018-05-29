@@ -9,11 +9,12 @@ public class Window extends JFrame {
 	
 	  public Window(){
 	    this.setTitle("Lorann");
-	    this.setSize(800, 800);
+	    this.setSize(650, 460);
 	    this.setLocationRelativeTo(null);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);             
 	    this.setVisible(true);
-	    this.setBackground(Color.BLACK);        
+	    this.setBackground(Color.BLACK);  
+	    this.setResizable(false);
 	    this.setContentPane(new Panel (this));               
 	    this.setVisible(true);
 	  }      
