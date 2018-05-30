@@ -99,10 +99,7 @@ public class Panel extends JPanel {
 			g.drawImage(monster3, 158, 848, null);
 			g.drawImage(monster4, 177, 848, null);
 			g.drawImage(monster5, 188, 848, null);
-			g.drawImage(lorannl, 600, 600, null);
-			
-			
-
+			g.drawImage(lorannl, 600, 600, null);					
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -122,7 +119,7 @@ public class Panel extends JPanel {
 	public void setLorannX(int LorannX) {
 		this.LorannX = LorannX;
 	}
-	
+
 	public void setLorannY(int LorannY) {
 		this.LorannY = LorannY;
 	}
