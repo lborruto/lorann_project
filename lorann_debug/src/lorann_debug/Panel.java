@@ -11,7 +11,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class Panel extends JPanel {
-	
+
 	private static final long serialVersionUID = 1L;
 	public int size = 32;
 
@@ -45,10 +45,10 @@ public class Panel extends JPanel {
 					.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/gate_closed.png"));
 			BufferedImage gateopen = ImageIO
 					.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/gate_open.png"));
-			BufferedImage horbone = ImageIO
-					.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/horizontal_bone.png"));
-			BufferedImage verbone = ImageIO
-					.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/vertical_bone.png"));
+			BufferedImage horbone = ImageIO.read(
+					new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/horizontal_bone.png"));
+			BufferedImage verbone = ImageIO.read(
+					new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/vertical_bone.png"));
 			BufferedImage lorannb = ImageIO
 					.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/lorann_b.png"));
 			BufferedImage lorannbl = ImageIO
@@ -99,23 +99,23 @@ public class Panel extends JPanel {
 			g.drawImage(monster3, 158, 848, null);
 			g.drawImage(monster4, 177, 848, null);
 			g.drawImage(monster5, 188, 848, null);
-			g.drawImage(lorannl, 600, 600, null);					
-			
+			g.drawImage(lorannl, 600, 600, null);
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		repaint();
 
 	}
-	
+
 	public int getLorannX() {
 		return LorannX;
 	}
-	
+
 	public int getLorannY() {
 		return LorannY;
 	}
-	
+
 	public void setLorannX(int LorannX) {
 		this.LorannX = LorannX;
 	}

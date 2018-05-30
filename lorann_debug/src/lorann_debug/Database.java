@@ -1,6 +1,12 @@
 package lorann_debug;
 
 import java.sql.*;
+
+import javax.imageio.ImageIO;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.math.*;
 import com.mysql.*;
 
@@ -9,7 +15,6 @@ public class Database {
 	private ResultSet result;
 
 	public Database() {
-		
 		int level = 1;
 
 		try {
@@ -48,19 +53,42 @@ public class Database {
 				cStmt.execute();
 				result = cStmt.executeQuery();
 			}
-			
+
 			if (level == 1) {
 				ResultSetMetaData resulMeta = result.getMetaData();
-				
+				for (int a = 1; a <= resulMeta.getColumnCount(); a++) {
+					System.out.print("\t" + resulMeta.getColumnName(a).toUpperCase() + "\t *");
+				}
+
+				System.out.println("\n");
+
+				while (result.next()) {
+					for (int a = 1; a <= resulMeta.getColumnCount(); a++) {
+						System.out.print("\t" + result.getObject(a).toString() + "\t *");
+						try {
+							switch (result.getObject(a).toString()) {
+							case "-":
+								BufferedImage wallH;
+								wallH = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\horizontal_bone.png"));
+//								String g = result.getObject(2).toString();
+//								int x = Integer.valueOf(g);
+//								String t = result.getObject(3).toString();
+//								int y = Integer.valueOf(t);
+//								new WallHorizontal(wallH, x, y);
+								break;
+
+							default:
+								break;
+							}
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
+					System.out.println("\n");
+				}
 			}
-
-			conn.close();
-		}
-
-		catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
-			System.err.println("ERROR! ");
-			System.err.println(e.getMessage());
 		}
 	}
 }
