@@ -123,28 +123,28 @@ public class BDD {
 						
 							switch(sprite) {
 							case '|':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"|\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"|\"," + x + "," + y + ","+ level +")");
 								break;
 							case '-':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"-\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"-\"," + x + "," + y + ","+ level +" )");
 								break;
 							case 'O':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"O\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"O\"," + x + "," + y + ","+ level +" )");
 								break;
 							case '.':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\".\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\".\"," + x + "," + y + ","+ level +" )");
 								break;
 							case 'H':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"H\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"H\"," + x + "," + y + ","+ level +" )");
 								break;
 							case 'i':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"i\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"i\"," + x + "," + y + ","+ level +" )");
 								break;
 							case 'p':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"p\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"p\"," + x + "," + y + ","+ level +" )");
 								break;
 							case 'x':
-								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"x\"," + x + "," + y + ", 1)");
+								stmt.executeUpdate("INSERT INTO level(Structure, X, Y, NumNiveau) VALUES(\"x\"," + x + "," + y + ","+ level +" )");
 								break;
 							default:
 								break;
