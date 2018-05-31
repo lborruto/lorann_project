@@ -74,7 +74,8 @@ via des procédures stockées.
 fonctionnement de votre programme) 
 Projet Java / POO / UML
 - Un rapport GIT permettant d’identifier la production de chacun des membres de l’équipe.
-- Tous les autres documents que vous j
+- Tous les autres documents que vous jugerez nécessaires (MCD, procédures stockées, autres
+diagrammes, commentaires, …) 
 
 ## Built With
 
