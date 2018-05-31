@@ -4,7 +4,24 @@ The goal is to rewrite the old game from 1985 'LORANN' in Java.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Il ne s‘agit pas de reproduire à l’identique cet abandonware. Ainsi, pour accéder aux différents niveaux
+du jeu (au nombre de 101), l’utilisateur devait déplacer le personnage (zone jeu) dans une salle
+permettant l’accès aux niveaux. Toute cette partie n’est bien entendu, pas demandée.
+De plus, le jeu original intègrait un éditeur de niveau (zone atelier) incluant des contrôles permettant
+de valider la jouabilité et la viabilité du niveau. Cette fonctionnalité n’est, elle non plus, pas demandée.
+Il s’agit de réaliser quelques niveaux (5 suffiront) accessibles par paramétrage dans le code. C’est-à-
+dire pour être plus explicite, qu’il n’est pas nécessaire que vous implémentiez une fonctionnalité
+permettant de changer de niveau au sein même du jeu. L’accès à un niveau différent pourra se faire 
+Projet Java / POO / UML
+via un paramètre dans votre code, un fichier de configuration ou un enregistrement dans votre base
+de données.
+Les niveaux devront impérativement être stockés dans une base de données.
+Beaucoup d’éléments graphiques sont présents dans le jeu. Certains représentent des éléments de
+décors des niveaux, d’autres des items à ramasser ou à éviter et certains des éléments mobiles. Il est
+inutile de tous les implémenter.
+Seuls les éléments suivants du jeu sont attendus : 
+
+![Alt text]http://prntscr.com/jowakd
 
 ### Base
 
