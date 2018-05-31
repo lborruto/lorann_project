@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -32,21 +33,24 @@ public class Window extends JFrame implements KeyListener {
 
 		if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
 			panel.setLorannX(panel.getLorannX() + 10);
-
+			//System.out.print("ZUCC");
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_LEFT) {
 			panel.setLorannY(panel.getLorannY() - 10);
+			//System.out.print("ZUCC");
 
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_UP) {
 			panel.setLorannY(panel.getLorannY() - 10);
+			//System.out.print("ZUCC");
 
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
-			panel.setLorannX(panel.getLorannX() + 10);
+		panel.setLorannX(panel.getLorannX() + 10);
+			//System.out.print("ZUCC");
 
 		}
 	}

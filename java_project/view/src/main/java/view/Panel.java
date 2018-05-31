@@ -18,8 +18,8 @@ public class Panel extends JPanel {
 
 	}
 
-	private int LorannX = 50;
-	private int LorannY = 50;
+	private int LorannX = 2;
+	private int LorannY = 3;
 
 	public void paintComponent(Graphics g) {
 
@@ -75,7 +75,7 @@ public class Panel extends JPanel {
 			BufferedImage lorannr = ImageIO
 					.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/lorann_r.png"));
 			g.drawImage(bg, 0, 0, null);
-			g.drawImage(lorannr, getLorannX(), getLorannY(), null);
+			g.drawImage(lorannr, LorannX, LorannY, null);
 			g.drawImage(bone, 10, 10, null);
 			g.drawImage(crystal, 12, 13, null);
 			g.drawImage(fireball1, 15, 18, null);
