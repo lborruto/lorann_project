@@ -35,6 +35,7 @@ UN PROJET MAVEN SOUS ECLIPSE
 - view
 - contract
 - main
+
 Le plugin Junit préconfiguré ainsi qu’un test d’exemple implémenté sur une des classes du module
 contract.
 Le plugin JXR préconfiguré afin de produire une documentation des fichiers sources
