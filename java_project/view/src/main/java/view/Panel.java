@@ -19,9 +19,6 @@ public class Panel extends JPanel {
 
 	}
 
-	private int LorannX = 2;
-	private int LorannY = 3;
-
 	public void paintComponent(Graphics g) {
 		
 		
@@ -33,15 +30,6 @@ public class Panel extends JPanel {
 			} 
 		}
 		
-		try {
-			BufferedImage lorannr = ImageIO
-					.read(new File("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/sprites/lorann_r.png"));
-			g.drawImage(lorannr, LorannX, LorannY, null);
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		
 		repaint();
 	}
 
@@ -50,7 +38,7 @@ public class Panel extends JPanel {
 	}
 
 	public int getLorannY() {
-		return LorannY;
+		return LorannY ;
 	}
 
 	public void setLorannX(int LorannX) {

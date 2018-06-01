@@ -39,24 +39,19 @@ public class Window extends JFrame implements KeyListener {
 
 		if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
 			panel.setLorannX(panel.getLorannX() + 10);
-			//System.out.print("ZUCC");
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_LEFT) {
 			panel.setLorannX(panel.getLorannX() - 10);
-			//System.out.print("ZUCC");
-
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_UP) {
 			panel.setLorannY(panel.getLorannY() - 10);
-			//System.out.print("ZUCC");
 
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
 		panel.setLorannY(panel.getLorannY() + 10);
-			//System.out.print("ZUCC");
 
 		}
 	}

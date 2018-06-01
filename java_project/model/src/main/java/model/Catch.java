@@ -137,6 +137,17 @@ public class Catch {
 								
 								Window.panel.img[x6][y6] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\gate_closed.png"));
 								break;
+								
+							case "H":
+								String rsltx7 = result.getObject(2).toString();
+								int x7 = Integer.valueOf(rsltx7);
+								String rslty7 = result.getObject(3).toString();
+								int y7 = Integer.valueOf(rslty7);
+								
+								Window.debut = 1;
+								
+								Window.panel.img[x7][y7] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png"));
+								break;
 														
 								
 							default:
