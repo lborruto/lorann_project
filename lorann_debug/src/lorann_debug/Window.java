@@ -1,19 +1,22 @@
 package lorann_debug;
 
 import java.awt.Color;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 public class Window extends JFrame implements KeyListener {
 
 	private static final long serialVersionUID = 1L;
-
 	public static Panel panel = new Panel();
+	public static Lorann lorann1 = new Lorann();
 	public static int debut = 0;
+	public static String spriteLorann = "C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png";
+
 
 	public Window() {
 		this.setTitle("Lorann");
@@ -29,6 +32,7 @@ public class Window extends JFrame implements KeyListener {
 		
 		this.setContentPane(panel);
 		this.setVisible(true);
+		
 	}
 
 	public void keyTyped(KeyEvent evt) {
@@ -38,21 +42,44 @@ public class Window extends JFrame implements KeyListener {
 	public void keyPressed(KeyEvent evt) {
 
 		if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
-			panel.setLorannX(panel.getLorannX() + 10);
+			
+			
+			
+			lorann1.setLorannX(lorann1.getLorannX() + 1);
+			try {
+				Window.panel.img[lorann1.getLorannX()][lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_LEFT) {
-			panel.setLorannX(panel.getLorannX() - 10);
+			lorann1.setLorannX(lorann1.getLorannX() - 1);
+			try {
+				Window.panel.img[lorann1.getLorannX()][lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_UP) {
-			panel.setLorannY(panel.getLorannY() - 10);
-
+			lorann1.setLorannY(lorann1.getLorannY() - 1);
+			try {
+				Window.panel.img[lorann1.getLorannX()][lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
-		panel.setLorannY(panel.getLorannY() + 10);
-
+			lorann1.setLorannY(lorann1.getLorannY() + 1);
+			try {
+				Window.panel.img[lorann1.getLorannX()][lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 

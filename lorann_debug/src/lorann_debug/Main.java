@@ -9,6 +9,7 @@ import lorann_debug.Catch;
 public abstract class Main extends JFrame {
 
     public static void main(final String[] args) {
+    	
     	BDD bdd = new BDD();
     	
     	Window _window = new lorann_debug.Window();

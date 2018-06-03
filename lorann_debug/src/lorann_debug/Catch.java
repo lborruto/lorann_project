@@ -4,17 +4,15 @@ import java.sql.*;
 
 import javax.imageio.ImageIO;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.math.*;
-import com.mysql.*;
 
-import lorann_debug.Window;
-
-public class Catch {
+public class Catch extends Window{
 	
 	private ResultSet result;
+	int arrayLevel[][] = new int [panel.arrayx][panel.arrayy];
+	int x = 0;
+	int  y = 0;
 
 	public Catch() {
 		int level = 1;
@@ -56,7 +54,7 @@ public class Catch {
 				result = cStmt.executeQuery();
 			}
 
-				ResultSetMetaData resulMeta = result.getMetaData();
+				//ResultSetMetaData resulMeta = result.getMetaData();
 
 				while (result.next()) {
 						try {
@@ -141,8 +139,10 @@ public class Catch {
 							case "H":
 								String rsltx7 = result.getObject(2).toString();
 								int x7 = Integer.valueOf(rsltx7);
+								lorann1.setLorannX(x7);
 								String rslty7 = result.getObject(3).toString();
 								int y7 = Integer.valueOf(rslty7);
+								lorann1.setLorannY(y7);
 								
 								Window.debut = 1;
 								
