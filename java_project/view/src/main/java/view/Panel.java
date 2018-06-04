@@ -12,6 +12,8 @@ public class Panel extends JPanel {
 	public int arrayy = 12;
 	public BufferedImage img[][] = new BufferedImage[arrayx][arrayy];
 	public static Lorann lorann1 = new Lorann();
+	public static int erasex[][] = new int[20][12];
+	public static int erasey[][] = new int[20][12];
 
 
 	public Panel() {

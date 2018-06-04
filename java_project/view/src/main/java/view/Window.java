@@ -42,11 +42,13 @@ public class Window extends JFrame implements KeyListener {
 	public void keyPressed(KeyEvent evt) {
 
 		if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
-			if(Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] == null || square) {
+			if(Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] == null || panel.lorann1.getLorannX() + 1 == panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()]) {
 				Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() + 1);
 				try {
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
 					Window.panel.img[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteBlack));
+					panel.erasex[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannX() - 1;
+					panel.erasey[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannY();
 	
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -55,11 +57,16 @@ public class Window extends JFrame implements KeyListener {
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_LEFT) {
-			if(Window.panel.img[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] == null) {
+			if(Window.panel.img[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] == null || panel.lorann1.getLorannX() - 1 == panel.erasex[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()]) {
 				Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() - 1);
+				if(Panel.lorann1.getLorannX() <= 0) {
+					Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() + 1);
+				}
 				try {
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));	
 					Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteBlack));
+					panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannX() + 1;
+					panel.erasey[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannY();
 
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -68,11 +75,16 @@ public class Window extends JFrame implements KeyListener {
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_UP) {
-			if(Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() -1] == null) {
+			if(Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() -1] == null || panel.lorann1.getLorannY() - 1 == panel.erasey[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() - 1] ) {
 				Panel.lorann1.setLorannY(Panel.lorann1.getLorannY() - 1);
+				if(Panel.lorann1.getLorannY() <= 0) {
+					Panel.lorann1.setLorannY(Panel.lorann1.getLorannY() + 1);
+				}
 				try {
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));	
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()+1] = ImageIO.read(new File(spriteBlack));
+					panel.erasex[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() + 1] = Panel.lorann1.getLorannX();
+					panel.erasey[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() + 1] = Panel.lorann1.getLorannY() + 1;
 
 			}	 catch (IOException e) {
 					e.printStackTrace();
@@ -81,11 +93,13 @@ public class Window extends JFrame implements KeyListener {
 		}
 
 		if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
-			if(Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() +1] == null) {
+			if(Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() +1] == null || panel.lorann1.getLorannY() + 1 == panel.erasey[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() + 1]) {
 				Panel.lorann1.setLorannY(Panel.lorann1.getLorannY() + 1);
 				try {
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() -1] = ImageIO.read(new File(spriteBlack));
+					panel.erasex[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() - 1] = Panel.lorann1.getLorannX();
+					panel.erasey[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() - 1] = Panel.lorann1.getLorannY() - 1;
 
 			} 	catch (IOException e) {
 					e.printStackTrace();

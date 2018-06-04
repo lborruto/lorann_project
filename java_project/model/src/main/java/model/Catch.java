@@ -11,6 +11,12 @@ import view.Window;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * 
+ * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ *
+ */
+
 public class Catch extends Window{
 	
 	private ResultSet result;
@@ -18,6 +24,12 @@ public class Catch extends Window{
 	int x = 0;
 	int  y = 0;
 
+/**
+ * This fonction serve to catch the level you want.
+ * By default it choose the level 1.
+ */
+	
+	
 	public Catch() {
 		int level = 1;
 
@@ -59,7 +71,13 @@ public class Catch extends Window{
 			}
 
 				//ResultSetMetaData resulMeta = result.getMetaData();
-
+			
+			
+/**
+ * This fonction serve to read the database in wamp.
+ * Each cararcter is associate with a picture and this is how we disegn the level.
+ */
+				
 				while (result.next()) {
 						try {
 							switch (result.getObject(1).toString()) {
@@ -151,19 +169,7 @@ public class Catch extends Window{
 								Window.debut = 1;
 								
 								Window.panel.img[x7][y7] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png"));
-								break;
-								
-							case "null":
-								String rsltx8 = result.getObject(2).toString();
-								int x8 = Integer.valueOf(rsltx8);
-								String rslty8 = result.getObject(3).toString();
-								int y8 = Integer.valueOf(rslty8);
-								
-								Window.debut = 1;
-								
-								Window.panel.img[x8][y8] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\black.png"));
-								break;
-														
+								break;										
 								
 							default:
 								break;
