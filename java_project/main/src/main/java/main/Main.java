@@ -1,6 +1,5 @@
 package main;
 import java.awt.Window;
-import java.util.Scanner;
 
 import javax.swing.JFrame;
 import model.BDD;
@@ -14,12 +13,6 @@ import model.Catch;
 
 public abstract class Main extends JFrame {
 	
-<<<<<<< HEAD
-	
-    public static void main(final String[] args) {
-    	
-    	//Menu _menu = new Menu();
-=======
 /**
  * Activate the programs
  * @param args 
@@ -28,7 +21,6 @@ public abstract class Main extends JFrame {
 
     public static void main(final String[] args) {
     	
->>>>>>> bdbc56ea1b551ab85a0d906a0ef34f140ce77bac
     	
     	BDD bdd = new BDD();
     	
@@ -36,4 +28,5 @@ public abstract class Main extends JFrame {
 
 		Catch _catch = new Catch();
     }
+
 }
