@@ -149,7 +149,7 @@ public class Catch extends Window{
 								Window.panel.img[x7][y7] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png"));
 								break;
 								
-							case " ":
+							case "null":
 								String rsltx8 = result.getObject(2).toString();
 								int x8 = Integer.valueOf(rsltx8);
 								String rslty8 = result.getObject(3).toString();
