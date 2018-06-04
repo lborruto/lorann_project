@@ -11,22 +11,37 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class BDD {
+/**
+ * 
+ * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ *
+ */
 
+public class BDD {
+	
 	public BDD() {
 		int level;
-		for(level = 1; level <=2 ; level++) {                                        //
+		for(level = 1; level <=2 ; level++) {                                        
 			ArrayList<String> list = new ArrayList<String>();
-			
+
+/**
+ * This fonction serve to connect the database at the code
+ */
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
 				Connection cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/lorann?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "");
 				Statement stmt = cnx.createStatement();
+
 				
-				if(level == 1) {                                                     //level 1 
+/**
+* This fonction serve to implement the level in the database. 
+*/
+				
+				
+				if(level == 1) {                                                      
 					
-					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl1.txt");                     // mettre le chemin dacces des fichier texte du niveau 1
-																				  //mettre un nom relatif au lieu dun chemin absolu, 
+					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl1.txt");                     
+																				 
 					InputStreamReader lire = new InputStreamReader(is);
 					BufferedReader buff = new BufferedReader(lire);
 				 
@@ -46,7 +61,7 @@ public class BDD {
 				
 				else if(level == 2) {
 					
-					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl2.txt");                     // mettre le chemin dacces des fichier texte du niveau 2
+					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl2.txt");                     
 					InputStreamReader lire = new InputStreamReader(is);
 					BufferedReader buff = new BufferedReader(lire);
 				 
@@ -63,7 +78,7 @@ public class BDD {
 				
 				else if(level == 3) {
 					
-					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl3.txt");                     // mettre le chemin dacces des fichier texte du niveau 3
+					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl3.txt");                     
 					InputStreamReader lire = new InputStreamReader(is);
 					BufferedReader buff = new BufferedReader(lire);
 				 
@@ -80,7 +95,7 @@ public class BDD {
 				
 				else if(level == 4) {
 					
-					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl4.txt");                     // mettre le chemin dacces des fichier texte du niveau 4
+					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl4.txt");                     
 					InputStreamReader lire = new InputStreamReader(is);
 					BufferedReader buff = new BufferedReader(lire);
 				 
@@ -97,7 +112,7 @@ public class BDD {
 				
 				else if(level == 5) {
 					
-					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl5.txt");                     // mettre le chemin dacces des fichier texte du niveau 5
+					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl5.txt");                    
 					InputStreamReader lire = new InputStreamReader(is);
 					BufferedReader buff = new BufferedReader(lire);
 				 
@@ -112,7 +127,9 @@ public class BDD {
 					
 				}
 				
-					
+/**
+ * This fonction serve to set each cararcter, and set the database, that means to create the database and the column for each level.
+ */
 					int x, y;
 					for (y = 0; y <= 11; y++) {
 						String temp = list.get(y);
