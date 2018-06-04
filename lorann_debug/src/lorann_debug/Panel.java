@@ -2,6 +2,10 @@ package lorann_debug;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class Panel extends JPanel {
@@ -11,6 +15,7 @@ public class Panel extends JPanel {
 	public int arrayx = 20;
 	public int arrayy = 12;
 	public BufferedImage img[][] = new BufferedImage[arrayx][arrayy];
+	public static Lorann lorann1 = new Lorann();
 
 
 	public Panel() {
@@ -26,5 +31,19 @@ public class Panel extends JPanel {
 			}
 		}
 		repaint();
+		
+//		try {
+//			BufferedImage perso = ImageIO.read(new File ("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png"));
+//			g.drawImage(perso, lorann1.getLorannX(), lorann1.getLorannY(), null);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		try {
+//			BufferedImage mob = ImageIO.read(new File ("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\monster_1.png"));
+//			g.drawImage(mob, lorann1.getLorannX(), lorann1.getLorannY(), null);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 }

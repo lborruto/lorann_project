@@ -2,7 +2,6 @@ package lorann_debug;
 
 public class Lorann {
 	
-	
 	private int _LorannX;
 	private int _LorannY;
 	private int _LorannKey;

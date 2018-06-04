@@ -139,14 +139,25 @@ public class Catch extends Window{
 							case "H":
 								String rsltx7 = result.getObject(2).toString();
 								int x7 = Integer.valueOf(rsltx7);
-								lorann1.setLorannX(x7);
+								Panel.lorann1.setLorannX(x7);
 								String rslty7 = result.getObject(3).toString();
 								int y7 = Integer.valueOf(rslty7);
-								lorann1.setLorannY(y7);
+								Panel.lorann1.setLorannY(y7);
 								
 								Window.debut = 1;
 								
 								Window.panel.img[x7][y7] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png"));
+								break;
+								
+							case " ":
+								String rsltx8 = result.getObject(2).toString();
+								int x8 = Integer.valueOf(rsltx8);
+								String rslty8 = result.getObject(3).toString();
+								int y8 = Integer.valueOf(rslty8);
+								
+								Window.debut = 1;
+								
+								Window.panel.img[x8][y8] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\black.png"));
 								break;
 														
 								
