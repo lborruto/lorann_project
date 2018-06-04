@@ -4,9 +4,10 @@ import java.sql.*;
 
 import javax.imageio.ImageIO;
 
+import view.Panel;
 import view.Window;
 
-import java.awt.Panel;
+
 import java.io.File;
 import java.io.IOException;
 
