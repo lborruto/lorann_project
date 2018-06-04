@@ -20,7 +20,7 @@ public class Window extends JFrame implements KeyListener {
 	
 	public Window() {
 		this.setTitle("Lorann");
-		this.setSize(650, 460);
+		this.setSize(850, 660);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBackground(Color.BLACK);
