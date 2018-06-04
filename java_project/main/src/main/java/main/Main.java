@@ -12,8 +12,16 @@ import model.Catch;
  */
 
 public abstract class Main extends JFrame {
+	
+/**
+ * Activate the programs
+ * @param args 
+ */
+	
 
     public static void main(final String[] args) {
+    	
+    	
     	BDD bdd = new BDD();
     	
     	Window _window = new view.Window();
