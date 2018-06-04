@@ -10,12 +10,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-/**
- * 
- * @author guillaume
- *
- */
+
 public class BDD {
+
 	public BDD() {
 		int level;
 		for(level = 1; level <=2 ; level++) {                                        //
@@ -81,10 +78,6 @@ public class BDD {
 					
 				}
 				
-				/**
-				 * 
-				 */
-				
 				else if(level == 4) {
 					
 					InputStream is = new FileInputStream("C:/Users/lucab/OneDrive/Documents/GitHub/lorann_project/levels/lvl4.txt");                     // mettre le chemin dacces des fichier texte du niveau 4
@@ -101,10 +94,6 @@ public class BDD {
 					buff.close();
 					
 				}
-				
-				/*
-				 * 
-				 */
 				
 				else if(level == 5) {
 					

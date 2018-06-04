@@ -4,17 +4,18 @@ import java.sql.*;
 
 import javax.imageio.ImageIO;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.math.*;
-import com.mysql.*;
-
 import view.Window;
 
-public class Catch {
+import java.awt.Panel;
+import java.io.File;
+import java.io.IOException;
+
+public class Catch extends Window{
 	
 	private ResultSet result;
+	int arrayLevel[][] = new int [panel.arrayx][panel.arrayy];
+	int x = 0;
+	int  y = 0;
 
 	public Catch() {
 		int level = 1;
@@ -56,7 +57,7 @@ public class Catch {
 				result = cStmt.executeQuery();
 			}
 
-				ResultSetMetaData resulMeta = result.getMetaData();
+				//ResultSetMetaData resulMeta = result.getMetaData();
 
 				while (result.next()) {
 						try {
@@ -141,12 +142,25 @@ public class Catch {
 							case "H":
 								String rsltx7 = result.getObject(2).toString();
 								int x7 = Integer.valueOf(rsltx7);
+								Panel.lorann1.setLorannX(x7);
 								String rslty7 = result.getObject(3).toString();
 								int y7 = Integer.valueOf(rslty7);
+								Panel.lorann1.setLorannY(y7);
 								
 								Window.debut = 1;
 								
 								Window.panel.img[x7][y7] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png"));
+								break;
+								
+							case "null":
+								String rsltx8 = result.getObject(2).toString();
+								int x8 = Integer.valueOf(rsltx8);
+								String rslty8 = result.getObject(3).toString();
+								int y8 = Integer.valueOf(rslty8);
+								
+								Window.debut = 1;
+								
+								Window.panel.img[x8][y8] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\black.png"));
 								break;
 														
 								
