@@ -7,5 +7,3 @@
 	PASSWORD : 
 
 - Run and enjoy !
-
-To modify a level, go to 
