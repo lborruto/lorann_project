@@ -1,10 +1,7 @@
 package main;
 
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
-import view.Window;
 /**
  * 
  * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
