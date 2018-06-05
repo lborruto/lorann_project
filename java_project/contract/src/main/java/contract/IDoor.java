@@ -2,6 +2,8 @@ package contract;
 
 public interface IDoor {
 	
+	public void verifDoor();
+	
 	public int get_DoorY();
 
 
@@ -12,6 +14,10 @@ public interface IDoor {
 
 
 	public void set_DoorX(int _DoorX);
+	
+	public boolean isKeyState();
+	
+	public void setKeyState(boolean keyState);
 
 
 }

@@ -52,17 +52,24 @@ public class Window extends JFrame implements KeyListener {
 	public void keyPressed(KeyEvent evt) {
 
 		if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
-			
-			System.out.println(panel.lorann1.getLorannX() + 1 + "   " + purse.get_PurseX());
-			
-			if(Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] == null || panel.lorann1.getLorannX() + 1 == panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] || panel.lorann1.getLorannX() + 1 == key.get_KeyX() || panel.lorann1.getLorannX() +1 == purse.get_PurseX()) {
+			System.out.println(door.get_DoorX() + "  " + Panel.lorann1.getLorannX() + 1);
+			if(Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] == null || panel.lorann1.getLorannX() + 1 == panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] || panel.lorann1.getLorannX() + 1 == key.get_KeyX() || panel.lorann1.getLorannX() +1 == purse.get_PurseX()|| panel.lorann1.getLorannX() + 1 == door.get_DoorX()) {
+				if(panel.lorann1.getLorannX() + 1 == key.get_KeyX()) {
+					
+					door.setKeyState(false);
+					
+				}
+				if(panel.lorann1.getLorannX() + 1 == door.get_DoorX()) {
+					
+					door.verifDoor();
+					
+				}
 				Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() + 1);
 				try {
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
 					Window.panel.img[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteBlack));
 					panel.erasex[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannX() - 1;
 					panel.erasey[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannY();
-	
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

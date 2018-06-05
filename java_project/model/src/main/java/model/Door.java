@@ -1,19 +1,24 @@
 package model;
 
 import contract.IDoor;
+import view.Lorann;
 
 public class Door implements IDoor {
 	
 	private int _DoorY;
 	private int _DoorX;
-	private boolean KeyState = true;
+	public boolean KeyState = true;
 
 	public Door(){
+				
+	}
+	
+	public void verifDoor() {
 		
-		if(KeyState == false) {
+		if(!KeyState) {
 			System.out.println("WINNER WINNER CHICKEN DINNER");
 		}
-		else if (KeyState == true) {
+		else if (KeyState) {
 			System.out.println("NOOB EZ GAME");
 
 		}
@@ -37,6 +42,14 @@ public class Door implements IDoor {
 
 	public void set_DoorX(int _DoorX) {
 		this._DoorX = _DoorX;
+	}
+	
+	public boolean isKeyState() {
+		return KeyState;
+	}
+
+	public void setKeyState(boolean keyState) {
+		KeyState = keyState;
 	}
 
 }

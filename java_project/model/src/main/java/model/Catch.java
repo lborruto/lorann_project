@@ -41,6 +41,7 @@ public class Catch{
 	public Catch(IKey key, IPurse purse, IDoor door) {
 		this.key = key;
 		this.purse = purse;
+		this.door = door;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String URL = "jdbc:mysql://localhost:3306/lorann?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
@@ -166,7 +167,7 @@ public class Catch{
 								door.set_DoorX(x6);
 								String rslty6 = result.getObject(3).toString();
 								int y6 = Integer.valueOf(rslty6);
-								door.set_DoorX(y6);
+								door.set_DoorY(y6);
 								
 								Window.debut = 1;
 								
