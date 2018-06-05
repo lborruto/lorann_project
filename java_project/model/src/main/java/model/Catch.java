@@ -97,7 +97,7 @@ public class Catch{
 								int y = Integer.valueOf(rslty);
 								
 								Window.debut = 1;
-								
+								//horizontal_bone.png
 								Window.panel.img[x][y] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\horizontal_bone.png"));
 								break;
 								
