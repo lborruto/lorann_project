@@ -7,3 +7,4 @@
 	PASSWORD : 
 
 - Run and enjoy !
+- If you can't run the executable file, just import the Maven Project onto Eclipse and Run as Java the Main class.
