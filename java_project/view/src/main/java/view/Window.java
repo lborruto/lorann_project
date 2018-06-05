@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -25,9 +26,6 @@ public class Window extends JFrame implements KeyListener {
 	private IKey key;
 	private IPurse purse;
 	private IDoor door;
-	public static String spriteLorann = "C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png";
-	public static String spriteBlack = "C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\black.png";
-	Boolean square = Boolean.valueOf(spriteBlack);
 	
 	public Window(IKey key, IPurse purse, IDoor door) {
 		this.key = key;
@@ -66,11 +64,11 @@ public class Window extends JFrame implements KeyListener {
 				}
 				Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() + 1);
 				try {
-					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
-					Window.panel.img[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteBlack));
+					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(getClass().getResource("/sprites/lorann_r.png").toURI()));
+					Window.panel.img[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = ImageIO.read(new File(getClass().getResource("/sprites/black.png").toURI()));
 					panel.erasex[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannX() - 1;
 					panel.erasey[Panel.lorann1.getLorannX() - 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannY();
-				} catch (IOException e) {
+				} catch (IOException | URISyntaxException e) {
 					e.printStackTrace();
 				}
 			}
@@ -83,12 +81,12 @@ public class Window extends JFrame implements KeyListener {
 					Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() + 1);
 				}
 				try {
-					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));	
-					Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteBlack));
+					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(getClass().getResource("/sprites/lorann_r.png").toURI()));
+					Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] = ImageIO.read(new File(getClass().getResource("/sprites/black.png").toURI()));
 					panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannX() + 1;
 					panel.erasey[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] = Panel.lorann1.getLorannY();
 
-				} catch (IOException e) {
+				} catch (IOException | URISyntaxException e) {
 					e.printStackTrace();
 				}
 			}	
@@ -101,12 +99,12 @@ public class Window extends JFrame implements KeyListener {
 					Panel.lorann1.setLorannY(Panel.lorann1.getLorannY() + 1);
 				}
 				try {
-					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));	
-					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()+1] = ImageIO.read(new File(spriteBlack));
+					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(getClass().getResource("/sprites/lorann_r.png").toURI()));
+					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()+1] = ImageIO.read(new File(getClass().getResource("/sprites/black.png").toURI()));
 					panel.erasex[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() + 1] = Panel.lorann1.getLorannX();
 					panel.erasey[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() + 1] = Panel.lorann1.getLorannY() + 1;
 
-			}	 catch (IOException e) {
+			}	 catch (IOException | URISyntaxException e) {
 					e.printStackTrace();
 				}
 			}
@@ -116,15 +114,18 @@ public class Window extends JFrame implements KeyListener {
 			if(Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() +1] == null || panel.lorann1.getLorannY() + 1 == panel.erasey[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() + 1] || panel.lorann1.getLorannY() + 1 == key.get_KeyY()) {
 				Panel.lorann1.setLorannY(Panel.lorann1.getLorannY() + 1);
 				try {
-					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));
-					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() -1] = ImageIO.read(new File(spriteBlack));
+					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(getClass().getResource("/sprites/lorann_r.png").toURI()));
+					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() -1] = ImageIO.read(new File(getClass().getResource("/sprites/black.png").toURI()));
 					panel.erasex[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() - 1] = Panel.lorann1.getLorannX();
 					panel.erasey[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY() - 1] = Panel.lorann1.getLorannY() - 1;
 
 			} 	catch (IOException e) {
 					e.printStackTrace();
 						panel.repaint();
-				}
+				} catch (URISyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			}
 		}
 	}

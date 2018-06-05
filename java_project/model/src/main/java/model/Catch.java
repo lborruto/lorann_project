@@ -13,6 +13,7 @@ import view.Window;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  * 
@@ -97,8 +98,7 @@ public class Catch{
 								int y = Integer.valueOf(rslty);
 								
 								Window.debut = 1;
-								//horizontal_bone.png
-								Window.panel.img[x][y] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\horizontal_bone.png"));
+								Window.panel.img[x][y] = ImageIO.read(new File(getClass().getResource("/sprites/horizontal_bone.png").toURI()));
 								break;
 								
 							case ".":
@@ -109,7 +109,7 @@ public class Catch{
 								
 								Window.debut = 1;
 								
-								Window.panel.img[x1][y1] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\bone.png"));
+								Window.panel.img[x1][y1] = ImageIO.read(new File(getClass().getResource("/sprites/bone.png").toURI()));
 								break;
 								
 							case "|":
@@ -120,7 +120,7 @@ public class Catch{
 								
 								Window.debut = 1;
 								
-								Window.panel.img[x2][y2] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\vertical_bone.png"));
+								Window.panel.img[x2][y2] = ImageIO.read(new File(getClass().getResource("/sprites/vertical_bone.png").toURI()));
 								break;
 								
 							case "O":
@@ -133,7 +133,7 @@ public class Catch{
 								
 								Window.debut = 1;
 								
-								Window.panel.img[x3][y3] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\crystal_ball.png"));
+								Window.panel.img[x3][y3] = ImageIO.read(new File(getClass().getResource("/sprites/crystal_ball.png").toURI()));
 								break;
 								
 							case "i":
@@ -146,7 +146,7 @@ public class Catch{
 								
 								Window.debut = 1;
 								
-								Window.panel.img[x4][y4] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\purse.png"));
+								Window.panel.img[x4][y4] = ImageIO.read(new File(getClass().getResource("/sprites/purse.png").toURI()));
 								break;
 								
 							case "x":
@@ -158,7 +158,7 @@ public class Catch{
 								
 								Window.debut = 1;
 								
-								Window.panel.img[x5][y5] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\monster_2.png"));
+								Window.panel.img[x5][y5] = ImageIO.read(new File(getClass().getResource("/sprites/monster_2.png").toURI()));
 								break;
 								
 							case "p":
@@ -171,7 +171,7 @@ public class Catch{
 								
 								Window.debut = 1;
 								
-								Window.panel.img[x6][y6] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\gate_closed.png"));
+								Window.panel.img[x6][y6] = ImageIO.read(new File(getClass().getResource("/sprites/gate_closed.png").toURI()));
 								break;
 								
 							case "H":
@@ -184,13 +184,13 @@ public class Catch{
 								
 								Window.debut = 1;
 								
-								Window.panel.img[x7][y7] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png"));
+								Window.panel.img[x7][y7] = ImageIO.read(new File(getClass().getResource("/sprites/lorann_r.png").toURI()));
 								break;										
 								
 							default:
 								break;
 							}
-						} catch (IOException e) {
+						} catch (IOException | URISyntaxException e) {
 							e.printStackTrace();
 						}
 					}
