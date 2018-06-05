@@ -1,5 +1,7 @@
 package view;
-
+/**
+ * Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ */
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -14,7 +16,9 @@ import contract.IKey;
 import contract.IPurse;
 
 public class Window extends JFrame implements KeyListener {
-
+/**
+ * Create window to launch the game
+ */
 	private static final long serialVersionUID = 1L;
 	public static Panel panel = new Panel();
 	public static int debut = 0;
@@ -48,21 +52,19 @@ public class Window extends JFrame implements KeyListener {
 	public void keyTyped(KeyEvent evt) {
 
 	}
-
+/**
+ * Lorann movements
+ */
 	public void keyPressed(KeyEvent evt) {
 
 		if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
 			System.out.println(door.get_DoorX() + "  " + Panel.lorann1.getLorannX() + 1);
 			if(Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] == null || panel.lorann1.getLorannX() + 1 == panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] || panel.lorann1.getLorannX() + 1 == key.get_KeyX() || panel.lorann1.getLorannX() +1 == purse.get_PurseX()|| panel.lorann1.getLorannX() + 1 == door.get_DoorX()) {
 				if(panel.lorann1.getLorannX() + 1 == key.get_KeyX()) {
-					
 					door.setKeyState(false);
-					
 				}
 				if(panel.lorann1.getLorannX() + 1 == door.get_DoorX()) {
-					
 					door.verifDoor();
-					
 				}
 				Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() + 1);
 				try {

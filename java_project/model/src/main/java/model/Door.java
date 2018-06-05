@@ -2,9 +2,15 @@ package model;
 
 import contract.IDoor;
 import view.Lorann;
-
+/**
+ * 
+ * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ *
+ */
 public class Door implements IDoor {
-	
+	/**
+	 * 	Instanciate door to open and finish level
+	 */
 	private int _DoorY;
 	private int _DoorX;
 	public boolean KeyState = true;

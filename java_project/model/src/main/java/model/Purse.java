@@ -1,9 +1,15 @@
 package model;
 
 import contract.IPurse;
-
+/**
+ * 
+ * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ *
+ */
 public class Purse implements IPurse {
-
+/**
+ * Not implemented yet, item to catch
+ */
 
 	private int _PurseY;
 	private int _PurseX;

@@ -1,9 +1,15 @@
 package model;
 
 import contract.IKey;
-
+/**
+ * 
+ * @author  Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ *
+ */
 public class Key implements IKey{
-	
+	/**
+	 *  Create instance of Key, to open door and finish level
+	 */
 	private int _KeyY;
 	private int _KeyX;
 	

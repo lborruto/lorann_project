@@ -3,7 +3,11 @@ package view;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
-
+/**
+ * 
+ * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ *
+ */
 public class Panel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
@@ -20,7 +24,9 @@ public class Panel extends JPanel {
 	}
 
 	public void paintComponent(Graphics g) {
-
+/**
+ * Load all the sprite on the map and display them at their own coordinate
+ */	
 		if (Window.debut == 1) {
 			for (int x1 = 0; x1 < arrayx; x1++) {
 				for (int y1 = 0; y1 < arrayy; y1++) {

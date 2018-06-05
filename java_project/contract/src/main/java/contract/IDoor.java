@@ -1,7 +1,13 @@
 package contract;
-
+/**
+ * 
+ * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
+ *
+ */
 public interface IDoor {
-	
+	/**
+	 * Link Door to other classes
+	 */
 	public void verifDoor();
 	
 	public int get_DoorY();
