@@ -10,21 +10,28 @@ import view.Window;
  * @author Guillaume Woreth, Luca Borruto, Ahmed Ben Mbarek
  *
  */
-public class Menu {
+public class Menu extends JPanel{
 	
-	/**
-	 * Buttons to launch differents levels
-	 */
-	private JButton button1 = new JButton("Level 1");
-	private JButton button2 = new JButton("Level 2");
-	private JButton button3 = new JButton("Level 3");
-	private JButton button4 = new JButton("Level 4");
-	private JButton button5 = new JButton("Level 5");
+//	private JButton button1 = new JButton("Level 1");
+//		private JButton button2 = new JButton("Level 2");
+//		private JButton button3 = new JButton("Level 3");
+//		private JButton button4 = new JButton("Level 4");
+//		private JButton button5 = new JButton("Level 5");
+	
 	public Menu() {
-	Window.panel.add(button1);
-	Window.panel.add(button2);
-	Window.panel.add(button3);
-	Window.panel.add(button4);
-	Window.panel.add(button5);
+		
+		
+		String[] lvl = { "START PRE_ALPHA" };
+		JOptionPane jop = new JOptionPane(), jop2 = new JOptionPane();
+		int rang = jop.showOptionDialog(null, "Disclamer : This game is in early development and does not reflect the final game.", "WELCOMME TO LORANN", JOptionPane.YES_NO_CANCEL_OPTION,
+				JOptionPane.QUESTION_MESSAGE, null, lvl, lvl);
+		
+//		Window.panel.add(button1);
+//		Window.panel.add(button2);
+//		Window.panel.add(button3);
+//		Window.panel.add(button4);
+//		Window.panel.add(button5);
+//		
+		
 	}
-}
+} 

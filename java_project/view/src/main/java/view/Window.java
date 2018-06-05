@@ -40,10 +40,8 @@ public class Window extends JFrame implements KeyListener {
 		this.setBackground(Color.BLACK);
 		this.setVisible(true);
 		this.setResizable(false);
-
 		setFocusable(true);
 		addKeyListener(this);
-
 		this.setContentPane(panel);
 		this.setVisible(true);
 

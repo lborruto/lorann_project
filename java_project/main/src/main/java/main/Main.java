@@ -1,6 +1,4 @@
 package main;
-import java.awt.Window;
-
 import javax.swing.JFrame;
 import model.BDD;
 import model.Catch;
