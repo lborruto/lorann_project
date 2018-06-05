@@ -19,13 +19,15 @@ import java.util.ArrayList;
 
 public class BDD {
 	
+	public int level;
+	
 	public BDD() {
-		int level;
-		for(level = 1; level <=2 ; level++) {                                        
+		
+		for(level = 1; level <=5 ; level++) {                                        
 			ArrayList<String> list = new ArrayList<String>();
 
 /**
- * This fonction serve to connect the database at the code
+ * This function serve to connect the database at the code
  */
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
@@ -34,7 +36,7 @@ public class BDD {
 
 				
 /**
-* This fonction serve to implement the level in the database. 
+* This function serve to implement the level in the database. 
 */
 				
 				
@@ -128,7 +130,7 @@ public class BDD {
 				}
 				
 /**
- * This fonction serve to set each cararcter, and set the database, that means to create the database and the column for each level.
+ * This function serve to set each character, and set the database, that means to create the database and the column for each level.
  */
 					int x, y;
 					for (y = 0; y <= 11; y++) {

@@ -25,13 +25,14 @@ public class Catch extends Window{
 	int  y = 0;
 
 /**
- * This fonction serve to catch the level you want.
+ * This function serve to catch the level you want.
  * By default it choose the level 1.
  */
 	
+	int l;
+	public int level = l;
 	
 	public Catch() {
-		int level = 1;
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");

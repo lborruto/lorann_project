@@ -21,12 +21,15 @@ public abstract class Main extends JFrame {
 
     public static void main(final String[] args) {
     	
+    	Menu _menu = new Menu();
     	
     	BDD bdd = new BDD();
     	
     	Window _window = new view.Window();
 
 		Catch _catch = new Catch();
+		
+		
     }
 
 }
