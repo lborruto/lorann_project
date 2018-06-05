@@ -4,7 +4,9 @@ import java.sql.*;
 
 import javax.imageio.ImageIO;
 
+import contract.IDoor;
 import contract.IKey;
+import contract.IPurse;
 import view.Panel;
 import view.Window;
 
@@ -25,6 +27,8 @@ public class Catch{
 	int x = 0;
 	int  y = 0;
 	private IKey key;
+	private IPurse purse;
+	private IDoor door;
 
 /**
  * This function serve to catch the level you want.
@@ -34,8 +38,9 @@ public class Catch{
 	int l;
 	public int level = 1;
 	
-	public Catch(IKey key) {
+	public Catch(IKey key, IPurse purse, IDoor door) {
 		this.key = key;
+		this.purse = purse;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String URL = "jdbc:mysql://localhost:3306/lorann?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
@@ -133,8 +138,10 @@ public class Catch{
 							case "i":
 								String rsltx4 = result.getObject(2).toString();
 								int x4 = Integer.valueOf(rsltx4);
+								purse.set_PurseX(x4);
 								String rslty4 = result.getObject(3).toString();
 								int y4 = Integer.valueOf(rslty4);
+								purse.set_PurseY(y4);
 								
 								Window.debut = 1;
 								
@@ -147,6 +154,7 @@ public class Catch{
 								String rslty5 = result.getObject(3).toString();
 								int y5 = Integer.valueOf(rslty5);
 								
+								
 								Window.debut = 1;
 								
 								Window.panel.img[x5][y5] = ImageIO.read(new File("C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\monster_2.png"));
@@ -155,8 +163,10 @@ public class Catch{
 							case "p":
 								String rsltx6 = result.getObject(2).toString();
 								int x6 = Integer.valueOf(rsltx6);
+								door.set_DoorX(x6);
 								String rslty6 = result.getObject(3).toString();
 								int y6 = Integer.valueOf(rslty6);
+								door.set_DoorX(y6);
 								
 								Window.debut = 1;
 								

@@ -4,7 +4,9 @@ import java.awt.Window;
 import javax.swing.JFrame;
 import model.BDD;
 import model.Catch;
+import model.Door;
 import model.Key;
+import model.Purse;
 
 /**
  * 
@@ -20,15 +22,17 @@ public abstract class Main extends JFrame {
  */
 	
 	private static Key key = new Key();
+	private static Purse purse = new Purse();
+	private static Door door = new Door();
     public static void main(final String[] args) {
   
     	new Menu();
     	
     	new BDD();
     	
-    	new Catch(key);
+    	new Catch(key, purse, door);
     	
-    	new view.Window(key);
+    	new view.Window(key, purse, door);
 
 		
 		
