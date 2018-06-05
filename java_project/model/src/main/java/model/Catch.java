@@ -4,6 +4,7 @@ import java.sql.*;
 
 import javax.imageio.ImageIO;
 
+import contract.IKey;
 import view.Panel;
 import view.Window;
 
@@ -17,12 +18,13 @@ import java.io.IOException;
  *
  */
 
-public class Catch extends Window{
+public class Catch{
 	
 	private ResultSet result;
-	int arrayLevel[][] = new int [panel.arrayx][panel.arrayy];
+	int arrayLevel[][] = new int [Window.panel.arrayx][Window.panel.arrayy];
 	int x = 0;
 	int  y = 0;
+	private IKey key;
 
 /**
  * This function serve to catch the level you want.
@@ -30,10 +32,10 @@ public class Catch extends Window{
  */
 	
 	int l;
-	public int level = l;
+	public int level = 1;
 	
-	public Catch() {
-
+	public Catch(IKey key) {
+		this.key = key;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String URL = "jdbc:mysql://localhost:3306/lorann?autoReconnect=true&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
@@ -75,8 +77,8 @@ public class Catch extends Window{
 			
 			
 /**
- * This fonction serve to read the database in wamp.
- * Each cararcter is associate with a picture and this is how we disegn the level.
+ * This function serve to read the database in wamp.
+ * Each character is associate with a picture and this is how we design the level.
  */
 				
 				while (result.next()) {
@@ -118,8 +120,10 @@ public class Catch extends Window{
 							case "O":
 								String rsltx3 = result.getObject(2).toString();
 								int x3 = Integer.valueOf(rsltx3);
+								key.set_KeyX(x3);
 								String rslty3 = result.getObject(3).toString();
 								int y3 = Integer.valueOf(rslty3);
+								key.set_KeyY(y3);
 								
 								Window.debut = 1;
 								

@@ -8,11 +8,10 @@ public class Lorann {
 	
 	private int _LorannX;
 	private int _LorannY;
-	private int _LorannKey;
-	
+
 /**
  * 
- * @return X coordonnate of lorann 
+ * @return X coordinate of lorann 
  */
 	public int getLorannX() {
 		return _LorannX;
@@ -20,7 +19,7 @@ public class Lorann {
 	
 /**
  * 
- * @return Y coordonnate of lorann 
+ * @return Y coordinate of lorann 
  */
 	
 	public int getLorannY() {
@@ -29,7 +28,7 @@ public class Lorann {
 		
 /**
  * 
- * @param Application of coordonnate X from the getter on lorann
+ * @param Application of coordinate X from the getter on lorann
  */
 
 
@@ -39,7 +38,7 @@ public class Lorann {
 
 /**
  * 
- * @param Application of coordonnate Y from the getter on lorann
+ * @param Application of coordinate Y from the getter on lorann
  */
 	
 	public void setLorannY(int LorannY) {

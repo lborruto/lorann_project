@@ -9,16 +9,20 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
+import contract.IKey;
+
 public class Window extends JFrame implements KeyListener {
 
 	private static final long serialVersionUID = 1L;
 	public static Panel panel = new Panel();
 	public static int debut = 0;
+	private IKey key;
 	public static String spriteLorann = "C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\lorann_r.png";
 	public static String spriteBlack = "C:\\Users\\lucab\\OneDrive\\Documents\\GitHub\\lorann_project\\sprites\\black.png";
 	Boolean square = Boolean.valueOf(spriteBlack);
 	
-	public Window() {
+	public Window(IKey key) {
+		this.key = key;
 		this.setTitle("Lorann");
 		this.setSize(850, 660);
 		this.setLocationRelativeTo(null);
@@ -42,7 +46,8 @@ public class Window extends JFrame implements KeyListener {
 	public void keyPressed(KeyEvent evt) {
 
 		if (evt.getKeyCode() == KeyEvent.VK_RIGHT) {
-			if(Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] == null || panel.lorann1.getLorannX() + 1 == panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()]) {
+			System.out.println(panel.lorann1.getLorannX() + 1 + "   " + key.get_KeyX());
+			if(Window.panel.img[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] == null || panel.lorann1.getLorannX() + 1 == panel.erasex[Panel.lorann1.getLorannX() + 1][Panel.lorann1.getLorannY()] || panel.lorann1.getLorannX() + 1 == key.get_KeyX()) {
 				Panel.lorann1.setLorannX(Panel.lorann1.getLorannX() + 1);
 				try {
 					Window.panel.img[Panel.lorann1.getLorannX()][Panel.lorann1.getLorannY()] = ImageIO.read(new File(spriteLorann));

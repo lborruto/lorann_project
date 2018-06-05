@@ -4,6 +4,7 @@ import java.awt.Window;
 import javax.swing.JFrame;
 import model.BDD;
 import model.Catch;
+import model.Key;
 
 /**
  * 
@@ -18,16 +19,18 @@ public abstract class Main extends JFrame {
  * @param args 
  */
 	
-
+	private static Key key = new Key();
     public static void main(final String[] args) {
+  
+    	new Menu();
     	
-    	Menu _menu = new Menu();
+    	new BDD();
     	
-    	BDD bdd = new BDD();
+    	new Catch(key);
     	
-    	Window _window = new view.Window();
+    	new view.Window(key);
 
-		Catch _catch = new Catch();
+		
 		
 		
     }

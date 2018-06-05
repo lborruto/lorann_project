@@ -14,6 +14,8 @@ public class Panel extends JPanel {
 	public static Lorann lorann1 = new Lorann();
 	public static int erasex[][] = new int[20][12];
 	public static int erasey[][] = new int[20][12];
+	public int eraseKeyX[][] = new int[20][12];
+	public int eraseKeyY[][] = new int[20][12];
 
 
 	public Panel() {

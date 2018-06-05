@@ -3,7 +3,7 @@ package main;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class Menu extends JPanel{
+public class Menu {
 	
 	public Menu() {
 		String[] lvl = { "Level 1", "Level 2", "Level 3", "Level 4", "Level 5" };
